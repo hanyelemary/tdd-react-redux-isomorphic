@@ -13,7 +13,7 @@ class SearchResultsPageContainer extends React.Component {
   render() {
     const { results } = this.props;
     return (
-      <SearchResultsPage results={results.toJS()} />
+      <SearchResultsPage results={results} />
     );
   }
 }
@@ -24,7 +24,7 @@ SearchResultsPageContainer.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  results: state.resultsForQuery
+  results: state.resultsForQuery.toJS()
 });
 
 export default connect(mapStateToProps, { searchResultsForQuery })(SearchResultsPageContainer);
