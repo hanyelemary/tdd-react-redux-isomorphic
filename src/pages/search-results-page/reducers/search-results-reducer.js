@@ -1,13 +1,13 @@
 import { Map } from 'immutable';
 
 const STARTING_PAGE = 0;
-const defaultResultState = Map({
-  payload: { resultContent: [], totalResultCount: 0, page: STARTING_PAGE },
+const defaultState = Map({
+  payload: { consultants: [] },
   query: '',
   isFetching: true
 });
 
-export const searchResultsForQuery = (state = defaultResultState, action) => {
+export const searchResultsForQuery = (state = defaultState, action) => {
   switch (action.type) {
     case 'SEARCH_RESULTS_COMPLETE':
       return Map({
@@ -18,13 +18,10 @@ export const searchResultsForQuery = (state = defaultResultState, action) => {
     case 'SEARCH_REQUEST_FAILED':
       return Map({
         payload: {
-          resultContent: [],
-          totalResultCount: 0,
-          page: STARTING_PAGE,
-          error: action.payload.error
+          consultants: []          
         },
+        error: action.payload.error,
         query: action.query,
-        error: action.error,
         isFetching: action.isFetching
       });
     default:

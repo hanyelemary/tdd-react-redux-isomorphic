@@ -7,21 +7,20 @@ const SearchResultsPage = ({ results }) => {
   let component;
   if (results.isFetching) {
     component = <Spinner />;
-  } else if (!results.isFetching && results.payload.error) {
-    component = (
-      <div className="ui centered padded grid">
-        <div id="no-results-container">
-          <h2>{results.payload.error}</h2>
-          <hr />
-          <div id="no-results-suggest"><i>Search is currently unavailable.</i></div>
-        </div>
-      </div>
+  } else if (results.error) {
+    component = (      
+      <NoSearchResults 
+        errorMessage={results.error}
+        secondaryMessage="Search is currently unavailable."
+      />        
     );
   } else if (!results.isFetching && results.payload.consultants.length === 0) {
     component = (
-      <div className="ui centered padded grid">
-        <NoSearchResults />
-      </div>);
+      <NoSearchResults
+        errorMessage="No results found."
+        secondaryMessage="Please try another search."  
+      />
+    );
   } else {
     component = (
       <div className="ui centered grid">
