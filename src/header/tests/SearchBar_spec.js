@@ -37,5 +37,21 @@ describe('SearchBar', () => {
 
       expect(searchButton.exists()).toBe(false);
     });
+
+    it('should not render when there is the query is an empty space', () => {
+      const fn = () => {};
+      const searchBar = mount(
+        <SearchBar 
+          handleKeyDown={fn}
+          handleValueChange={fn}
+          handleSearch={fn}
+          query="  "
+        />
+      );
+
+      const searchButton = searchBar.find('.search-button');
+
+      expect(searchButton.exists()).toBe(false);
+    });
   });
 });
