@@ -7,8 +7,12 @@ const SearchResults = ({ results }) => {
   });
 
   return (
-    <div id="main-container-content" className="main-container-white-box wrapping">
-      {resultList}
+    <div className="ui centered grid">
+      <div className="fourteen wide computer sixteen wide mobile fourteen wide tablet column">
+        <div id="main-container-content" className="main-container-white-box wrapping">
+          {resultList}
+        </div>
+      </div>
     </div>
   );
 };

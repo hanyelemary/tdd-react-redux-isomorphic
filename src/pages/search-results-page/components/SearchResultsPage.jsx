@@ -23,11 +23,7 @@ const SearchResultsPage = ({ results }) => {
     );
   } else {
     component = (
-      <div className="ui centered grid">
-        <div className="fourteen wide computer sixteen wide mobile fourteen wide tablet column">
-          <SearchResults results={results.payload.consultants} query={results.query} />
-        </div>
-      </div>
+      <SearchResults results={results.payload.consultants} query={results.query} />
     );
   }
 
