@@ -1,0 +1,50 @@
+/* Main entrypoint for app css */
+
+/* Colors
+==========================================================================
+*/
+
+@primary         : #702269;
+@secondary       : #b51b58;
+@muted           : #fbdcf8;
+@subText         : #888;
+@backgroundGray  : #F0F4F7;
+@translucent     : rgba(0, 0, 0, .4);
+
+.logo {
+  width: 200px;
+}
+
+.ellipsis-text {
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+}
+
+.disabled {
+  opacity: 0.3;
+}
+
+.wrapping {
+  flex-wrap: wrap;
+}
+
+.page-content {
+  display: flex;
+}
+
+.content-panel {
+  flex: 1;
+  padding: 25px 20px 20px 20px;
+}
+
+.main-container-white-box {
+  background-color: rgb(255,255,255);
+  box-shadow: 0 1px 6px rgba(0,0,0,.08),0 1px 6px rgba(0,0,0,.12);
+}
+
+@import './App.less';
+@import './header/css/PageHeader.less';
+@import './header/css/Search.less';
+@import './pages/search-results-page/css/SearchResults.less';

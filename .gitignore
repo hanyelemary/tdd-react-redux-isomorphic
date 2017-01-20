@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+npm-debug.log
+semantic/dist
+semantic/src/definitions
+semantic/src/site
+semantic/tasks
+semantic/gulpfile.js
+server.bundle.js
+mochawesome-reports
+coverage
+.env
+.npmrc
+.vscode/
+*.log*

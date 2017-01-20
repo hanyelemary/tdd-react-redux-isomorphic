@@ -1,0 +1,4 @@
+--require test/utils/dom.js
+--require babel-polyfill
+--compilers jsx?:babel-core/register
+--recursive src/**/tests/**/*.js

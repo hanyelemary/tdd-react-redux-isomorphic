@@ -1,0 +1,20 @@
+{
+  "port": 8081,
+  "protocol": "http",  
+  "predicates": [{
+    "and" : [
+      {
+        "equals": {
+          "method": "POST",
+          "path": "/consultants/search/",
+          "headers": {
+            "Content-Type": "application/json"            
+          }
+        }
+      }
+    ]
+  }],
+  "responses": [{
+    "inject" : "<%- stringify(filename, 'autosuggest/response.js') %>"    
+  }]
+}

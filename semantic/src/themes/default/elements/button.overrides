@@ -1,0 +1,15 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+.ui.icon.button > img {
+  width: 20px;
+}
+
+.ui.icon.button.blue {
+  background-color: rgb(1, 151, 236);
+}
+
+.ui.icon.button.half-width {
+  width: 50%;
+}

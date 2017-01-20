@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  # specifies global predefined variables
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true,
+    "jquery": true
+  },
+  # extends the .eslintrc file from airbnb
+  "extends": "eslint-config-airbnb",
+  # in the rules section you overide the settings from the parent configuration
+  # for more info on rule configuration: http://eslint.org/docs/user-guide/configuring#configuring-rules
+  # list of eslint rules http://eslint.org/docs/rules/
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "max-len": ["error", 120],
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": "off",
+    "no-underscore-dangle": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "new-cap": ["error", { "capIsNewExceptions": ["Map", "Set", "List", "Seq", "Router"] }],
+    "complexity": ["error", { "max": 4 }],
+    "max-statements": ["error", {"max": 8}],
+    "max-params": ["error", 3],
+    "arrow-body-style": 0,
+    "no-magic-numbers": "off",
+    "no-unused-vars": "error"    
+  }
+}

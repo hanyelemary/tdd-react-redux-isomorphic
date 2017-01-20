@@ -1,0 +1,20 @@
+{
+  "port": 8081,
+  "protocol": "http",  
+  "predicates": [{
+    "and" : [
+      {
+        "equals": {
+          "method": "GET",
+          "path": "/consultants/hanyelemary",
+          "headers": {
+            "Content-Type": "application/json"
+          }
+        }
+      }
+    ]
+  }],
+  "responses": [{
+    "inject" : "<%- stringify(filename, 'profiles/response.js') %>"
+  }]
+}

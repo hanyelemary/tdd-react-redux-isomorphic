@@ -1,0 +1,106 @@
+.search {
+    border: 1.5px solid rgb(149, 152, 154);
+    border-radius: 20px;
+    padding: 0.5em;
+    display: flex;
+}
+
+.search-bar {
+    border: 1px solid #BCBCBC;
+    padding: 0.4em;
+    display: flex;
+    box-shadow: 0px 3px 6px #CCC;
+}
+
+.search-bar-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: rgb(53, 54, 55);
+    font-size: 0.975em;
+    padding: 0.3em 0 0.3em 0.5em;
+    font-family: inherit;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.search-button {
+    outline: none;
+    border: none;
+    background-color: @primary;
+    color: white;
+    line-height: 1em;
+    padding: 0.3em 1.2em;
+    font-weight: bold;
+    font-family: inherit;
+    display: inline-block;
+}
+
+.search-button:hover {
+    background-color: @secondary;
+    cursor: pointer;
+}
+
+.autocomplete-results-container {
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.17);
+    margin-top: 1em;
+    z-index: 9999;
+
+    .autocomplete-result {
+        border-bottom: 1px solid rgb(227, 227, 227);
+        width: 100%;
+        padding: 1.3em 2.5%;
+        margin-top: -5px;
+        display: inline-block;
+
+        &:hover, &.selected {
+          border: none;
+          margin-bottom: 1px;
+          cursor: pointer;
+          background-color: @muted;
+        }
+
+        .autocomplete-result-name {
+            float: left;
+            padding-left: 1em;
+            color: #353637;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+        }
+
+        .autocomplete-result-icon {
+            float: left;
+            display: inline-block;
+            width: 1.5em;
+        }
+    }
+
+    .autocomplete-results-footer {
+        text-decoration: none;
+        color: white;
+        background-color: @primary;
+        text-align: center;
+        padding: 1.3em 0em;
+        margin-top: -5px;
+
+        &:hover {
+          background-color: @secondary;
+        }
+    }
+}
+
+#no-results-container {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.search-link, .search-link:visited {
+    text-decoration: none;
+    color: inherit;
+}
