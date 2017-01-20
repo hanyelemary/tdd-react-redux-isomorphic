@@ -15,5 +15,5 @@ export function* searchForResults(action) {
 }
 
 export function* watchSearchForResults() {
-  yield* takeEvery('SEARCH_FOR_RESULTS', searchForResults);
+  yield takeEvery('SEARCH_FOR_RESULTS', searchForResults);
 }
