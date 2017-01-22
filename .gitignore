@@ -14,3 +14,4 @@ coverage
 .npmrc
 .vscode/
 *.log*
+*.pid
