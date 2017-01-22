@@ -1,6 +1,5 @@
 import { Map } from 'immutable';
 
-const STARTING_PAGE = 0;
 const defaultState = Map({
   payload: { consultants: [] },
   query: '',
@@ -18,7 +17,7 @@ export const searchResultsForQuery = (state = defaultState, action) => {
     case 'SEARCH_REQUEST_FAILED':
       return Map({
         payload: {
-          consultants: []          
+          consultants: []
         },
         error: action.payload.error,
         query: action.query,

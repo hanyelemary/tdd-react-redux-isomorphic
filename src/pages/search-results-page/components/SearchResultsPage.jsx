@@ -8,25 +8,26 @@ const SearchResultsPage = ({ results }) => {
   if (results.isFetching) {
     component = <Spinner />;
   } else if (results.error) {
-    component = (      
-      <NoSearchResults 
-        errorMessage={results.error}
-        secondaryMessage="Search is currently unavailable."
-      />        
-    );
-  } else if (!results.isFetching && results.payload.consultants.length === 0) {
-    component = (
+    component = 
       <NoSearchResults
-        errorMessage="No results found."
-        secondaryMessage="Please try another search."  
+        errorClassName="failure-container"
+        errorMessage="Failure searching for query"
+        secondaryMessage="The search service is currently unavailable."
       />
-    );
+  } else if (results.payload.consultants.length === 0) {
+    component = 
+      <NoSearchResults
+        errorClassName="no-results-container"
+        errorMessage="No results found"
+        secondaryMessage="Please try another search"
+      />
   } else {
-    component = (
-      <SearchResults results={results.payload.consultants} query={results.query} />
-    );
-  }
-
+    component = 
+      <SearchResults 
+        results={results.payload.consultants}
+        query={results.query}
+      />
+  } 
   return component;
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-const NoSearchResults = ({ errorMessage, secondaryMessage }) => {
+const NoSearchResults = ({ errorClassName, errorMessage, secondaryMessage }) => {
   return (
     <div className="ui centered padded grid">
       <div className="ui centered padded grid">
-        <div className="no-results-container">
+        <div className={errorClassName}>
           <h2 className="no-results-text">{errorMessage}</h2>
           <hr />
           <div className="no-results-suggest">
