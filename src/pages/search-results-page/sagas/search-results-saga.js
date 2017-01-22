@@ -10,6 +10,9 @@ export function* searchForResults(action) {
     yield put({ 
       type: 'SEARCH_RESULTS_COMPLETE', payload: results, query, isFetching: false 
     });
+    //Reset the search box after we get results. 
+    //We don't need to show the autocomplete results.
+    yield put({ type: 'RESET_SEARCH' });
   } else {
     yield put({ 
       type: 'SEARCH_REQUEST_FAILED', payload: results, isFetching: false
