@@ -13,7 +13,6 @@ export function* searchForResults(action) {
     //Reset the search box after we get results.
     yield put({ type: 'RESET_SEARCH' });
   } catch (ex) {
-    console.log('exception happened', ex.message);
     yield put({ 
       type: 'SEARCH_REQUEST_FAILED', payload: ex.message, isFetching: false
     });
