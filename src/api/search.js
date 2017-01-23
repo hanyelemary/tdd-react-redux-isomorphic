@@ -5,11 +5,7 @@ const search = (query) => {
   const encodedQuery = encodeURIComponent(query);
   return fetch(`${document.location.origin}/api/search/${encodedQuery}`)
     .then(res => {
-      if (res.ok) {
-        return res.json();
-      } else {
-        return { error: `Failure searching for "${query}"` };
-      }
+      return res.json();
     })
     .then(results => {
       return results;

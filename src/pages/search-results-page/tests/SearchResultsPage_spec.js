@@ -76,14 +76,9 @@ describe('Search results page', () => {
 
   describe('Failure from Search Service', () => {
     it('should display a message to the user when the service is down', (done) => {
-      //given
-      const response = {
-        "error": "The service is currently down"
-      }
-
       nock(config.BASE_URL)
         .get('/api/search/somequery')
-        .reply(HttpStatus.INTERNAL_SERVER_ERROR, response);
+        .reply(HttpStatus.INTERNAL_SERVER_ERROR);
 
       const searchResultsPage = mount(
         <Provider store={store}>

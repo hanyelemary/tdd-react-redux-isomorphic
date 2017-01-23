@@ -19,7 +19,7 @@ export const searchResultsForQuery = (state = defaultState, action) => {
         payload: {
           consultants: []
         },
-        error: action.payload.error,
+        error: action.payload,
         query: action.query,
         isFetching: action.isFetching
       });
