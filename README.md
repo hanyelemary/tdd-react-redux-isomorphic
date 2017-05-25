@@ -11,7 +11,12 @@ Sample Redux Isomorphic App
 * Mountebank - for our fake service (over the wire)
 
 ## Project setup
-Run this command to fetch all the required dependencies:
+Since SemanticUI uses gulp to build themed versions of the library, you must install gulp globally as a pre-requisite:
+```
+npm install -g gulp
+```
+
+Now you need to fetch all the required dependencies in the package.json file by running this command within the project directory:
 ```npm install```
 
 In a different shell, run this command to start up the service: ```npm run mountebank```
