@@ -4,7 +4,7 @@ Sample Redux Isomorphic App
 ## Tech stack
 * NodeJS
 * Gulp
-* Semantic UI is used as the UI library
+* [SemanticUI](https://semantic-ui.com/introduction/getting-started.html) is used as the UI library
 * Express
 * React / Redux
 * Redux Sagas - for asyncronous operations
@@ -21,5 +21,3 @@ Run this command to start up the app while watching for changes:
 ```npm run dev```
 
 Now you can go to [http://localhost:8080/](http://localhost:8080/)
-
-
