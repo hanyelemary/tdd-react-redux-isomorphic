@@ -1,8 +1,10 @@
 # tdd-react-redux-isomorphic
 Sample Redux Isomorphic App
 
-##Tech stack
+## Tech stack
 * NodeJS
+* Gulp
+* Semantic UI is used as the UI library
 * Express
 * React / Redux
 * Redux Sagas - for asyncronous operations
