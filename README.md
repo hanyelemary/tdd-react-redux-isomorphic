@@ -21,6 +21,10 @@ Now you need to fetch all the required dependencies in the package.json file by 
 
 In a different shell, run this command to start up the service: ```npm run mountebank```
 
+## Building SemanticUI
+Run this command to build semantic's assets (JavaScript and CSS):
+```npm run build:semantic```
+
 ## Running the project
 Run this command to start up the app while watching for changes:
 ```npm run dev```

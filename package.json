@@ -23,7 +23,7 @@
   },
   "author": "Hany Elemary",
   "license": "ISC",
-  "dependencies": {        
+  "dependencies": {
     "babel-polyfill": "^6.20.0",
     "body-parser": "^1.15.0",
     "classnames": "^2.2.5",
@@ -43,7 +43,7 @@
     "redux-logger": "^2.7.4",
     "redux-saga": "^0.14.0",
     "scroll-behavior": "^0.9.2",
-    "semantic-ui": "=2.1.8",
+    "semantic-ui": "=2.2.10",
     "semantic-ui-visibility": "^2.2.1",
     "svg-url-loader": "^1.0.3"
   },
