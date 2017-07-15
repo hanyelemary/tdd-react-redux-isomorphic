@@ -1,5 +1,7 @@
-# tdd-react-redux-isomorphic
-Sample Redux Isomorphic App
+# [tdd-react-redux-isomorphic](http://www.informit.com/store/test-driven-development-for-react-redux-in-an-isomorphic-9780134698403?platform=hootsuite)
+Sample Redux Isomorphic App.
+
+A step-by-step video tutorial on building this application is available on [Informit](http://www.informit.com/store/test-driven-development-for-react-redux-in-an-isomorphic-9780134698403?platform=hootsuite).
 
 ## Tech stack
 * NodeJS
